@@ -35,6 +35,8 @@ h1{
   height: 450px;
   position: relative;
 }
+
+/*caractéristiques des photos du défilement et animation*/
 .image{
   width:700px;
   height: 450px;
@@ -47,6 +49,8 @@ h1{
   width:100%;
   height: 100%;
 }
+
+/*caractéristiques des boutons gauche et droite*/
 .left, .right{
   position:absolute;
   font-size: 40px;
@@ -64,6 +68,8 @@ h1{
 .right{
   right:0;
 }
+
+/*caractéristiques des boutons gauche et droite quand on passe la souris*/
 .left:hover, .right:hover{
   cursor:pointer;
   font-size: 42px;
@@ -75,6 +81,7 @@ h1{
   background-color: #000000 ;
   opacity: 50%;
 }
+
 .slider:hover > .left, .slider:hover > .right{
   display:block;
 }
@@ -89,7 +96,7 @@ h1{
   margin-top: 20px;
 }
 
-/* Container for image text */
+/* Container du texte des images */
 .caption-container {
   font-family: bebas neue, cyrillic;
   text-align: center;
@@ -100,29 +107,32 @@ h1{
   color: white;
 }
 
+/*rangée de vignettes*/
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* Six columns side by side */
+/* colonnes de vignettes (six) */
 .column {
   float: left;
   width: 16.66%;
 }
 
-/* Add a transparency effect for thumnbail images */
+/* transparence sur les vignettes */
 .demo {
   opacity: 0.6;
 }
 
+/*quand on passe la souris l'opacité revient à la normal*/
 .active,
 .demo:hover {
   opacity: 1;
 }
 
 
+/*animation du défilement des photos*/
 @keyframes smooth {
   0% {
     width: 100%; 
