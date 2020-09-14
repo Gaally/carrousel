@@ -41,8 +41,7 @@ h1{
   width:700px;
   height: 450px;
   animation: smooth 5s;
-  animation-fill-mode: forwards;
-  animation-play-state: 
+  animation-fill-mode: forwards; 
 }
 
 .image img{
