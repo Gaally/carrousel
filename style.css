@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #000000;
+}
+
+h1{
+  font-family: montserrat, sans serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #60D394;
+  padding: 10px;
+}
+
+.text{
+  font-family: amiko;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: #FDFFFC;
+  margin-bottom: 10px;
+}
+
+.image-slider{
+  position: relative;
+}
+
+.slider{
+  width:700px;
+  height: 450px;
+  position: relative;
+}
+.image{
+  width:700px;
+  height: 450px;
+  animation: smooth 5s;
+  animation-fill-mode: forwards;
+  animation-play-state: 
+}
+
+.image img{
+  width:100%;
+  height: 100%;
+}
+.left, .right{
+  position:absolute;
+  font-size: 40px;
+  font-weight: bold;
+  top:50%;
+  color: #28587B;
+  font-family: bebas neue, cyrillic;
+  background-color: #000000 ;
+  opacity: 50%;
+  transition:0.5s;
+  padding:8px;
+  display:none;
+}
+
+.right{
+  right:0;
+}
+.left:hover, .right:hover{
+  cursor:pointer;
+  font-size: 42px;
+  font-weight: bold;
+  top:50%;
+  color: #28587B;
+  border-radius: 0 6px 6px 0;
+  font-family: bebas neue, cyrillic;
+  background-color: #000000 ;
+  opacity: 50%;
+}
+.slider:hover > .left, .slider:hover > .right{
+  display:block;
+}
+
+.foot{
+  font-family: amiko;
+  font-size: 12px;
+  text-align: right;
+  color: #AAF683;
+  background-color: #161925;
+  padding : 20px;
+  margin-top: 20px;
+}
+
+/* Container for image text */
+.caption-container {
+  font-family: bebas neue, cyrillic;
+  text-align: center;
+  background-color: #222;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+
+@keyframes smooth {
+  0% {
+    width: 100%; 
+    margin-left: -100%;
+    opacity: 0%;
+  }
+
+  50% {
+    width: 100%;
+    margin-left: 0%;
+    opacity: 100%;
+  }
+  100% {
+    width: 100%;
+    margin-left: 100%;
+    opacity: 0%;
+  }
+}
