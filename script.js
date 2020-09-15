@@ -6,7 +6,7 @@
 // initialisation du défilement automatique
  autoSlide();
  function autoSlide(){
-  var images = document.getElementsByClassName('image');
+  var images = document.getElementsByClassName("image");
   var dots = document.getElementsByClassName("demo");
   var captionText = document.getElementById("caption");
 
