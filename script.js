@@ -6,36 +6,42 @@
 // initialisation du défilement automatique
  autoSlide(); // appel de la fonction autoslide
  function autoSlide(){ // création de la fonction autoslide
-  var images = document.getElementsByClassName("image"); // création de variable pour les photos de la div image
-  var dots = document.getElementsByClassName("demo"); // création de variable pour les photos des miniatures
-  var captionText = document.getElementById("caption"); // création de variable pour le titre des photos
+    var images = document.getElementsByClassName("image"); // création de variable pour les photos de la div image
+    var dots = document.getElementsByClassName("demo"); // création de variable pour les photos des miniatures
+    var captionText = document.getElementById("caption"); // création de variable pour le titre des photos
 
-  for (var i = 0; i < images.length; i++) { // la boucle parcourt l'ensemble des photos de la liste pour l'autoslide
-    images[i].style.display = "none"; // cache les photos
-  }
+    for (var i = 0; i < images.length; i++) { // la boucle parcourt l'ensemble des photos de la liste pour l'autoslide
+      images[i].style.display = "none"; // cache les photos
+    }
 
-  if(index > images.length - 1){ // si la var index > le nombre d'images moins une alors index = 0
+    if(index > images.length - 1){ // si la var index > le nombre d'images moins une alors index = 0
     index = 0;
-  }
-  images[index].style.display = "block"; // affiche photo
-  captionText.innerHTML = dots[index].alt; // prend le texte des photos pour les afficher
-  index++;
+    }
 
-  time = setTimeout(autoSlide, 5000); //execute autoslide toutes les 5secondes
+    images[index].style.display = "block"; // affiche photo
+    captionText.innerHTML = dots[index].alt; // prend le texte des photos pour les afficher
+    index++;
+
+ 
+   time = setTimeout(autoSlide, 5000); //execute autoslide toutes les 5secondes
 }
 
+
 var slideIndex = 1; // défini la photo sur 1
-showSlides(slideIndex); // affiche la photo actuelle
+  showSlides(slideIndex); // affiche la photo actuelle
+
 
 // suivant/précédent contrôle
 function manualSlide(n) {
   showSlides(slideIndex += n); //incrémente l'index slide par 1 et affiche cette photo
 }
 
+
 // vignettes contrôle
 function currentSlide(n) {
   showSlides(slideIndex = n); // affiche la photo actuelle
 }
+
 
 // affiche les bonnes slides
 function showSlides(n) {
@@ -53,4 +59,4 @@ function showSlides(n) {
       slides[slideIndex-1].style.display = "block"; // définit la diapo actuelle en élément block
       dots[slideIndex-1].className += "active"; // définit le dot appartenant à la slide en "active"
       captionText.innerHTML = dots[slideIndex-1].alt; // définit le texte appartenant au captiontext de la diapo actuelle
-    }
+}
