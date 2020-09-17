@@ -33,9 +33,11 @@ var slideIndex = 1; // défini la photo sur 1
 
 // suivant/précédent contrôle
 function manualSlide(n) {
+  clearTimeout(time);
   showSlides(slideIndex += n); //incrémente l'index slide par 1 et affiche cette photo
+  autoSlide();
 }
-
+ 
 
 // vignettes contrôle
 function currentSlide(n) {
